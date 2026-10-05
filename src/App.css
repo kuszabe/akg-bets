@@ -1,0 +1,26 @@
+nav {
+  padding: var(--wa-space-s);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav > *:first-child {
+  justify-content: flex-start;
+}
+
+nav > *:last-child {
+  justify-content: flex-end;
+}
+
+
+main {
+  padding: var(--wa-space-l);
+}
