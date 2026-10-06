@@ -1,0 +1,3 @@
+.page::part(navigation-header) + .page::part(navigation-footer) + .page::part(navigation) {
+    background-color: var(--wa-color-surface-default);
+}

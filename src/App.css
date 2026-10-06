@@ -24,3 +24,11 @@ nav > *:last-child {
 main {
   padding: var(--wa-space-l);
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100svh;
+}
+
+

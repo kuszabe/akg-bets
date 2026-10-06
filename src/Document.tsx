@@ -28,7 +28,7 @@ export default function Document(props: ParentProps) {
         <title>Solid App</title>
         <HydrationScript />
       </head>
-      <body style={{ margin: 0, padding: 0, height: '100vh' }}>{props.children}</body>
+      <body style={{ margin: 0, padding: 0, height: '100svh' }}>{props.children}</body>
     </html>
   );
 }
