@@ -4,11 +4,11 @@ import { paths } from "./router"
 const Navbar = () => (
     <nav>
         <span>
-            <wa-button href={paths.app()} appearance="plain">AKGbets</wa-button>
+            <b style="font-size: 1.3rem;">AKGbets</b>
         </span>
-        <span></span>
         <span>
-            <wa-button href={paths.app.account()} appearance="plain"><wa-icon name="user"></wa-icon></wa-button>
+            <wa-button appearance="plain"><span style="color: var(--wa-color-text-normal);">310 zed</span></wa-button>
+            <wa-button href={paths.account()} appearance="plain"><wa-icon name="user"></wa-icon></wa-button>
         </span>
     </nav>
 )

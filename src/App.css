@@ -1,15 +1,17 @@
 nav {
-  padding: var(--wa-space-s);
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  padding: var(--wa-space-m);
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: var(--wa-space-m);
 }
 
 nav > * {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: var(--wa-space-m);
 }
 
 nav > *:first-child {
@@ -30,5 +32,3 @@ body {
   padding: 0;
   min-height: 100svh;
 }
-
-

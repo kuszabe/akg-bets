@@ -1,8 +1,9 @@
 import { Loading, ParentComponent } from "solid-js";
 import Navbar from "./Navbar";
 import styles from "./layout.module.css";
+import { paths } from "./router";
 
-export const AppLayout: ParentComponent = (props) => (
+export const HomeLayout: ParentComponent = (props) => (
     <>
       <Navbar />
       <main>
@@ -11,31 +12,23 @@ export const AppLayout: ParentComponent = (props) => (
     </>
 );
 
+export const SubpageLayout: ParentComponent<{pagename: string}> = (props) => (
+  <>
+    <nav>
+      <span style="font-size: 1.2rem;">
+          <wa-button href={paths.home()} appearance="plain"><wa-icon name="caret-left"></wa-icon></wa-button>
+          <b>{props.pagename}</b>
+      </span>
+      <span></span>
+    </nav>
+    <main>
+      {props.children}
+    </main>
+  </>
+)
+
 export const EmptyLayout: ParentComponent = (props) => (
   <Loading fallback={<main>Loading…</main>}>
     {props.children}
   </Loading>
 );
-
-export const TestDesktopLayout: ParentComponent = (props) => (
-  <wa-page class={styles.page}>
-    <header slot="header">
-      <b>AKGbets</b>
-    </header>
-
-    <nav slot="navigation">
-      <wa-button appearance="plain" href="#">Valami</wa-button>
-      <wa-button appearance="plain" href="#">Valami</wa-button>
-      <wa-button appearance="plain" href="#">Valami</wa-button>
-    </nav>
-
-    <nav slot="navigation-footer">
-      <wa-button appearance="plain" href="#">Valami</wa-button>
-      <wa-button appearance="plain" href="#">Valami</wa-button>
-      <wa-button appearance="plain" href="#">Valami</wa-button>
-    </nav>
-
-    
-    {props.children}
-  </wa-page>
-)

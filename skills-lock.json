@@ -73,6 +73,11 @@
       "skillPath": "skills/firestore-rules-creation/SKILL.md",
       "computedHash": "bc83aa04931591ad5657b0bf1986ba44beba89344913ffe4a91968a1d2f5c073"
     },
+    "webawesome-design": {
+      "source": "./node_modules/@awesome.me/webawesome/dist/skills/webawesome-design",
+      "sourceType": "local",
+      "computedHash": "2626a8bd7f21918d1ab0104c3abf0b060a8b2da2676fe14e499e3c36214af612"
+    },
     "xcode-project-setup": {
       "source": "firebase/agent-skills",
       "sourceType": "github",

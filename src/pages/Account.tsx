@@ -1,7 +1,9 @@
+import { SubpageLayout } from "../layout"
+
 export default function Account() {
   return (
-    <div>
+    <SubpageLayout pagename="fiók">
       <h1>Account</h1>
-    </div>
+    </SubpageLayout>
   );
 }
