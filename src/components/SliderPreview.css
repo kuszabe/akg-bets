@@ -1,0 +1,12 @@
+.slider-preview {
+  --spacing: 0;
+  inline-size: 100%;
+}
+.slider-preview-summary {
+  font-size: var(--wa-font-size-xs);
+  color: var(--wa-color-text-quiet);
+}
+.slider-preview-summary > strong {
+  color: var(--wa-color-text-normal);
+  font-size: var(--wa-font-size-m);
+}

@@ -1,0 +1,40 @@
+.site-answers {
+  --min-column-size: 12ch;
+  inline-size: 100%;
+}
+.site-answers-1 {
+  grid-template-columns: minmax(0, 1fr);
+}
+.site-answers-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.site-odds-chip {
+  /* Match the inactive answer button's appearance, without button semantics. */
+  padding: var(--wa-space-xs);
+  min-height: var(--wa-space-2xl);
+  background: var(--wa-color-neutral-fill-normal);
+  color: var(--wa-color-neutral-on-normal);
+  border: var(--wa-form-control-border-width) var(--wa-form-control-border-style) transparent;
+  border-radius: var(--wa-form-control-border-radius);
+  font-family: inherit;
+  font-size: var(--wa-font-size-xs);
+  font-weight: var(--wa-font-weight-normal);
+  min-inline-size: 0;
+  align-items: center;
+}
+.site-odds-chip {
+  flex-wrap: nowrap;
+}
+.site-odds-chip > strong {
+  font-size: var(--wa-font-size-s);
+  font-weight: var(--wa-font-weight-semibold);
+  color: inherit;
+  white-space: nowrap;
+}
+.site-odds-chip > span {
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+.site-odds-chip {
+  box-sizing: border-box;
+}
