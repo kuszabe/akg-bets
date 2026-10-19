@@ -1,6 +1,6 @@
-import { BetCardPreview } from "../components/BetCardPreview";
-import { OddsPreview } from "../components/OddsPreview";
-import { SliderPreview } from "../components/SliderPreview";
+import { BetCardPreview } from "../preview-cards/BetCardPreview";
+import { OddsPreview } from "../preview-cards/OddsPreview";
+import { SliderPreview } from "../preview-cards/SliderPreview";
 import { HomeLayout } from "../layout";
 
 export default function Home() {
