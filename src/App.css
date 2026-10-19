@@ -24,11 +24,32 @@ nav > *:last-child {
 
 
 main {
-  padding: var(--wa-space-l);
+  padding: var(--wa-space-m);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > * {
+  inline-size: 100%;
+  max-inline-size: 72rem;
+}
+
+@media (min-width: 48rem) {
+  main {
+    padding: var(--wa-space-l);
+  }
 }
 
 body {
   margin: 0;
   padding: 0;
   min-height: 100svh;
+}
+
+.two-column {
+  display: grid;
+  /* Collapses when a column can't fit the min size; min(100%, …) prevents overflow. */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+  gap: var(--wa-space-m);
 }

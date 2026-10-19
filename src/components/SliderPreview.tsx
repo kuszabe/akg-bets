@@ -21,7 +21,7 @@ export function SliderPreview(props: SliderPreviewProps) {
       <div class="wa-stack wa-gap-xs">
       <div class="slider-preview-summary wa-cluster wa-gap-xs">
         <span>{props.label ?? "Current attendance"}</span>
-        <strong>{Math.round(props.value)}{props.unit}</strong>
+        <strong>{Math.round(props.value)} {props.unit}</strong>
       </div>
       <div inert>
       <wa-slider
@@ -32,6 +32,8 @@ export function SliderPreview(props: SliderPreviewProps) {
         readonly
         aria-hidden="true"
       >
+        <span slot="reference">{minimum()}{props.unit ? ` ${props.unit}` : ""}</span>
+        <span slot="reference">{maximum()}{props.unit ? ` ${props.unit}` : ""}</span>
       </wa-slider>
       </div>
       </div>

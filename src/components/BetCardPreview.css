@@ -1,13 +1,20 @@
-.site-bet-card {
-  inline-size: 100%;
-  --spacing: var(--wa-space-m);
-}
-.site-bet-card[hidden] {
-  display: none !important;
-}
 .site-bet-card-link {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  block-size: 100%;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+}
+.site-bet-card-link[hidden] {
+  display: none !important;
+}
+.site-bet-card {
+  flex: 1;
+  inline-size: 100%;
+  block-size: 100%;
+  --spacing: var(--wa-space-m);
 }
 .site-bet-meta {
   font-size: var(--wa-font-size-2xs);
@@ -32,9 +39,13 @@
 .site-bet-card-link:focus-visible {
   outline: var(--wa-focus-ring-width) solid var(--wa-color-brand-fill-loud);
   outline-offset: var(--wa-focus-ring-offset);
-  border-radius: var(--wa-border-radius-s);
+  border-radius: var(--wa-border-radius-m);
+}
+.site-bet-card-link:focus-visible .site-bet-card {
+  outline: none;
 }
 .site-bet-card::part(body) {
+  flex: 1;
   min-inline-size: 0;
 }
 .site-bet-card, .site-bet-card * {

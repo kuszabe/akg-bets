@@ -7,9 +7,8 @@ export type OddsPreviewProps = {
 
 /** Passive answer displays; the enclosing card handles navigation. */
 export function OddsPreview(props: OddsPreviewProps) {
-  const columns = () => props.options.length === 1 || props.options.some(option => option.label.length > 22) ? 1 : 2;
   return (
-    <div class={["site-answers wa-grid wa-gap-xs", columns() === 1 ? "site-answers-1" : "site-answers-2"]}>
+    <div class="site-answers wa-cluster wa-gap-xs">
       <For each={props.options}>
         {option => (
           <div class="site-odds-chip wa-split wa-gap-xs">

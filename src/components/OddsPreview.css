@@ -1,14 +1,13 @@
 .site-answers {
-  --min-column-size: 12ch;
   inline-size: 100%;
 }
-.site-answers-1 {
-  grid-template-columns: minmax(0, 1fr);
-}
-.site-answers-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
 .site-odds-chip {
+  /* wa-split sets inline-size: 100%, which made chips shrink side-by-side
+     instead of wrapping. Size to content; wrap when that no longer fits. */
+  flex: 1 0 auto;
+  inline-size: auto;
+  max-inline-size: 100%;
+  box-sizing: border-box;
   /* Match the inactive answer button's appearance, without button semantics. */
   padding: var(--wa-space-xs);
   min-height: var(--wa-space-2xl);
@@ -19,13 +18,12 @@
   font-family: inherit;
   font-size: var(--wa-font-size-xs);
   font-weight: var(--wa-font-weight-normal);
-  min-inline-size: 0;
   align-items: center;
-}
-.site-odds-chip {
   flex-wrap: nowrap;
+  overflow: hidden;
 }
 .site-odds-chip > strong {
+  flex: none;
   font-size: var(--wa-font-size-s);
   font-weight: var(--wa-font-weight-semibold);
   color: inherit;
@@ -33,8 +31,7 @@
 }
 .site-odds-chip > span {
   min-inline-size: 0;
-  overflow-wrap: anywhere;
-}
-.site-odds-chip {
-  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
